@@ -5,24 +5,20 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
+    <img alt="Vue logo" class="logo" src="@/assets/logoR.svg" width="125" height="125" />
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="Bienvenidos a RestInvenSo" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/ensayo">Ensayo</RouterLink>
-        <RouterLink to="/mirar">Mirar</RouterLink>
-        <RouterLink to="/prueba">Prueba</RouterLink>
+        <RouterLink to="/inicioSesion">Login</RouterLink>
+        <RouterLink to="/registroUsuario">Registrarse</RouterLink>
+        <RouterLink to="/ResetPassword">Restablecer contraseña </RouterLink>
       </nav>
     </div>
   </header>
 
   <RouterView />
 </template>
-prueba
 
 <style scoped>
 header {
@@ -32,7 +28,7 @@ header {
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1rem;
 }
 
 nav {

@@ -1,33 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: HomeView,
+      path: '/inicioSesion',
+      name: 'login',
+      component: () => import('../views/inicioSesion.vue'),
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue'),
+      path: '/registroUsuario',
+      name: 'registroUsuario',
+      component: () => import('../views/RegistroUsuario.vue'),
     },
     {
-      path: '/ensayo',
-      name: 'ensayo',
-      component: () => import('../views/ensayo.vue'),
+      path: '/resetPassword',
+      name: 'resetPassword',
+      component: () => import('../views/ResetPassword.vue'),
     },
     {
-      path: '/mirar',
-      name: 'mirar',
-      component: () => import('../views/mirar.vue'),
-    },
-    {
-      path: '/prueba',
-      name: 'prueba',
-      component: () => import('../views/prueba.vue'),
+      path: '/inventario',
+      name: 'inventario',
+      component: () => import('../components/InventarioProducto.vue'),
     },
   ],
 })
