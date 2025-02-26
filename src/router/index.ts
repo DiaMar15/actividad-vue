@@ -4,6 +4,8 @@ import RegisterView from '../views/RegisterView.vue'
 import ResetPasswordView from '../views/ResetPasswordView.vue'
 import WireFlameLayout from '../components/layout/WireFlameLayout.vue'
 import DashboardView from '../views/DashboardView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
+import NotFoundLayout from '../components/layout/NotFoundLayout.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -53,6 +55,18 @@ const router = createRouter({
           name: 'oficina',
           component: DashboardView,
           props: { category: 'oficina' },
+        },
+      ],
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'notFound',
+      component: NotFoundLayout,
+      children: [
+        {
+          path: '',
+          name: 'notFoundView',
+          component: NotFoundView,
         },
       ],
     },
