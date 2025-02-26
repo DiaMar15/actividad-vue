@@ -43,17 +43,17 @@ export default {
 
       if (user) {
         console.log('Inicio de sesión exitoso')
-        this.$router.push({ name: 'inventario' }) // Redirigir al inventario
+        this.$router.push({ name: 'dashboard' }) // Redirigir al dashboard
       } else {
         console.log('Credenciales incorrectas')
         alert('Correo o contraseña incorrectos. Por favor, intenta nuevamente.')
       }
     },
     showResetPassword() {
-      this.$router.push({ name: 'resetPassword' }) // Redirigir a la vista de restablecimiento de contraseña
+      this.$router.push({ name: 'resetPassword' })
     },
     showSignUp() {
-      this.$router.push({ name: 'registroUsuario' }) // Redirigir a la vista de registro de usuario
+      this.$router.push({ name: 'registroUsuario' })
     },
   },
 }
