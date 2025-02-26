@@ -1,14 +1,10 @@
-<!-- Header.vue -->
-<script setup lang="ts">
-import NavPage from './NavPage.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logoR.svg" width="125" height="125" />
     <div class="wrapper">
       <h1>Bienvenidos a RestInvenSo</h1>
-      <NavPage />
     </div>
   </header>
 </template>

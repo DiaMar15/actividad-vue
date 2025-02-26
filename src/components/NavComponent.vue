@@ -4,18 +4,18 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <nav>
-    <RouterLink to="/inicioSesion">Login</RouterLink>
-    <RouterLink to="/registroUsuario">Registrarse</RouterLink>
-    <RouterLink to="/ResetPassword">Restablecer contraseña</RouterLink>
+    <RouterLink to="/login">Login</RouterLink>
+    <RouterLink to="/register">Registrarse</RouterLink>
+    <RouterLink to="/resetpassword">Restablecer contraseña</RouterLink>
   </nav>
 </template>
 
 <style scoped>
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 18px;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 nav a.router-link-exact-active {
@@ -34,15 +34,5 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
-}
-
-@media (min-width: 1024px) {
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
 }
 </style>

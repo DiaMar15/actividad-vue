@@ -1,31 +1,60 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import LoginView from '../views/LoginView.vue'
+import RegisterView from '../views/RegisterView.vue'
+import ResetPasswordView from '../views/ResetPasswordView.vue'
+import WireFlameLayout from '../components/layout/WireFlameLayout.vue'
+import DashboardView from '../views/DashboardView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      redirect: '/inicioSesion',
+      redirect: '/login',
     },
     {
-      path: '/inicioSesion',
+      path: '/login',
       name: 'login',
-      component: () => import('../views/inicioSesion.vue'),
+      component: LoginView,
+      meta: { layout: 'AuthLayout' },
     },
     {
-      path: '/registroUsuario',
-      name: 'registroUsuario',
-      component: () => import('../views/RegistroUsuario.vue'),
+      path: '/register',
+      name: 'register',
+      component: RegisterView,
+      meta: { layout: 'AuthLayout' },
     },
     {
       path: '/resetPassword',
       name: 'resetPassword',
-      component: () => import('../views/ResetPassword.vue'),
+      component: ResetPasswordView,
+      meta: { layout: 'AuthLayout' },
     },
     {
-      path: '/inventario',
-      name: 'inventario',
-      component: () => import('../components/InventarioProducto.vue'),
+      path: '/dashboard',
+      name: 'dashboard',
+      component: WireFlameLayout,
+      meta: { layout: 'WireFlameLayout' },
+      children: [
+        {
+          path: 'alimentos',
+          name: 'alimentos',
+          component: DashboardView,
+          props: { category: 'alimentos' },
+        },
+        {
+          path: 'limpieza',
+          name: 'limpieza',
+          component: DashboardView,
+          props: { category: 'limpieza' },
+        },
+        {
+          path: 'oficina',
+          name: 'oficina',
+          component: DashboardView,
+          props: { category: 'oficina' },
+        },
+      ],
     },
   ],
 })

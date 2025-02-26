@@ -51,16 +51,16 @@ export default {
   background-color: #2e3b4e;
   color: white;
   padding: 40px;
-  border-radius: 8px;
+  border-radius: 5px;
   width: 500px;
-  margin: auto;
+  margin: 10px;
 }
 
 input {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   width: 100%;
-  padding: 15px;
-  border-radius: 4px;
+  padding: 12px;
+  border-radius: 8px;
   border: none;
 }
 

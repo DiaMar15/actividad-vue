@@ -1,22 +1,18 @@
 <template>
-  <div class="container">
-    <header>
-      <img alt="Vue logo" class="logo" src="@/assets/logoR.svg" width="125" height="125" />
-      <h1>Bienvenidos a RestInvenSo</h1>
-      <NavPage />
-    </header>
-
-    <main>
-      <RouterView />
-    </main>
-
-    <Footer />
-  </div>
+  <component :is="layout">
+    <RouterView />
+  </component>
 </template>
 
 <script setup lang="ts">
-import NavPage from './components/NavPage.vue'
-import Footer from './components/FooterPage.vue'
+import { useRoute } from 'vue-router'
+import AuthLayout from './components/layout/AuthLayout.vue'
+import WireFlameLayout from './components/layout/WireFlameLayout.vue'
+import { computed } from 'vue'
+
+const route = useRoute()
+const layouts = { AuthLayout, WireFlameLayout }
+const layout = computed(() => layouts[route.meta.layout] || AuthLayout)
 </script>
 
 <style scoped>

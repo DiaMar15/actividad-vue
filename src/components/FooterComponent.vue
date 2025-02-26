@@ -13,9 +13,9 @@
 <style scoped>
 footer {
   background-color: #4c99fd;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -25,12 +25,12 @@ footer p {
 }
 
 footer nav {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 footer nav a {
   display: inline-block;
-  margin: 0 1rem;
+  margin: 0 0rem;
   color: #333;
 }
 
